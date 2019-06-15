@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity"
+    android:scrollbars="vertical">
+
+    <!--EditText: Input text to be saved as pdf file-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/textEt"
+                android:layout_width="395dp"
+                android:layout_height="61dp"
+                android:gravity="start"
+                android:hint="Enter name..."
+                android:inputType="text|textMultiLine"
+                android:minHeight="200dp"
+                android:padding="5dp" />
+
+            <!--Button:   Saves inputted data as pdf file-->
+
+            <EditText
+                android:id="@+id/emailet"
+                android:layout_width="395dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/phoneet"
+                android:layout_width="393dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Phone no."
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/addresset"
+                android:layout_width="397dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter address"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/gendertv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender" />
+
+            <RadioGroup
+                android:layout_width="398dp"
+                android:layout_height="88dp">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/languagetv"
+                android:layout_width="400dp"
+                android:layout_height="30dp"
+                android:text="Computer Languages Known" />
+
+            <EditText
+                android:id="@+id/langet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="C++,Java,C,etc"
+                android:inputType="textMultiLine" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="173dp"
+                android:layout_height="133dp"
+                tools:srcCompat="@tools:sample/avatars[1]" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Save PDF" />
+
+            <ImageView
+                android:id="@+id/linear"
+                android:layout_width="118dp"
+                android:layout_height="116dp"
+                tools:srcCompat="@tools:sample/avatars[10]" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
