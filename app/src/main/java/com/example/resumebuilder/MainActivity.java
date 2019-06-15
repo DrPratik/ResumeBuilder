@@ -1,5 +1,6 @@
 package com.example.resumebuilder;
 
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -25,6 +26,7 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import java.io.FileOutputStream;
+import java.io.StringReader;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int STORAGE_CODE = 1000;
     //declaring views
-    EditText mTextEt,mEmail,mPhone,mAddress,lang;
+    EditText mTextEt,mEmail,mPhone,mAddress,lang,sscb,sscp,hscb,hscp,degree,clgname,cgpa,hobbies;
     Button mSaveBtn;
     ImageButton profilepic;
     private static int RESULT_LOAD_IMAGE=-1;
@@ -49,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
         mAddress=findViewById(R.id.addresset);
         mEmail=findViewById(R.id.emailet);
         lang=findViewById(R.id.langet);
+        sscb=findViewById(R.id.sscboard);
+        sscp=findViewById(R.id.sscper);
+        hscb=findViewById(R.id.hscboard);
+        hscp=findViewById(R.id.hscper);
+        degree=findViewById(R.id.degree);
+        clgname=findViewById(R.id.college);
+        cgpa=findViewById(R.id.cgpa);
+        hobbies=findViewById(R.id.hobbies);
+
         profilepic=findViewById(R.id.imageButton);
         profilepic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,11 +117,24 @@ public class MainActivity extends AppCompatActivity {
             String mphone=mPhone.getText().toString();
             String maddress=mAddress.getText().toString();
             String mlang=lang.getText().toString();
+            String msscb=sscb.getText().toString();
+            String mhscb=hscb.getText().toString();
+            String msscp=sscp.getText().toString();
+            String mhscp=hscp.getText().toString();
+            String mdegree=degree.getText().toString();
+            String mCollege=clgname.getText().toString();
+            String mCGPA=cgpa.getText().toString();
+            String mhobbies=hobbies.getText().toString();
             String mtv="Languages Known";
             String cpp1="CPP";
             String java1="JAVA";
             String android1="Android";
             String c1="C";
+            String mSSC="SSC Information:";
+            String mHSC="HSC Information";
+            String deg="Degree:";
+            String grad="Graduation Details:";
+            String hob="Hobbies:";
             //add author of the document (optional)
             mDoc.addAuthor(mText);
 
@@ -123,6 +147,24 @@ public class MainActivity extends AppCompatActivity {
             mDoc.add(new Paragraph("      "));
             mDoc.add(new Paragraph(mtv));
             mDoc.add(new Paragraph(mlang));
+            mDoc.add(new Paragraph(mSSC));
+            mDoc.add(new Paragraph(msscb));
+            mDoc.add(new Paragraph("Percentages: "+msscp));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph(mHSC));
+            mDoc.add(new Paragraph(mhscb));
+            mDoc.add(new Paragraph("Percentages: "+mhscp));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph(deg));
+            mDoc.add(new Paragraph("Degree: "+mdegree));
+            mDoc.add(new Paragraph("College: "+mCollege));
+            mDoc.add(new Paragraph("CGPA: "+mCGPA));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph("        "));
+            mDoc.add(new Paragraph(hob));
+            mDoc.add(new Paragraph(mhobbies));
             //close the document
             mDoc.close();
             //show message that file is saved, it will show file name and file path too

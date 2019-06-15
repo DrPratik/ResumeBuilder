@@ -102,6 +102,71 @@
                 android:layout_height="133dp"
                 tools:srcCompat="@tools:sample/avatars[1]" />
 
+            <EditText
+                android:id="@+id/sscboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter SSC Board"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/sscper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter SSC percentage"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/hscboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter HSC board"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/hscper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter HSC percentage"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Degree"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/college"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter college name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/cgpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="enter cgpa"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/hobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter your hobbies"
+                android:inputType="textMultiLine" />
+
             <Button
                 android:id="@+id/saveBtn"
                 style="@style/Base.Widget.AppCompat.Button.Colored"
@@ -112,11 +177,6 @@
                 android:gravity="center"
                 android:text="Save PDF" />
 
-            <ImageView
-                android:id="@+id/linear"
-                android:layout_width="118dp"
-                android:layout_height="116dp"
-                tools:srcCompat="@tools:sample/avatars[10]" />
         </LinearLayout>
     </ScrollView>
 
