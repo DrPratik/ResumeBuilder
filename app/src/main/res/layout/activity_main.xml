@@ -9,7 +9,8 @@
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".MainActivity"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:background="@android:color/holo_blue_light">
 
     <!--EditText: Input text to be saved as pdf file-->
     <ScrollView
@@ -176,9 +177,10 @@
                 android:drawablePadding="5dp"
                 android:gravity="center"
                 android:text="Save PDF" />
-
         </LinearLayout>
     </ScrollView>
+
+
 
 
 </LinearLayout>
